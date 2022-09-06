@@ -44,4 +44,15 @@ window.document => 폼
     .splice 로 자르기 가능
     ex) fruits.splice(2, 1);
     (2) ['사과', '배']
+
+
+    함수 (function())
+    - 익명 함수 : function(){};
+    - 선언적 함수 : function 함수이름 (){};
+
+    function 함수명 (parameter1, parameter2 ...){
+        실행문;
+        return 반환값;
+    }
+    함수명(args1, args2...)
 */

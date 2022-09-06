@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 선언적 함수 예제1 -->
+    <script>
+      let text1 = "함수 선언 전 호출";
+      let text2 = "함수 선언 후 호출";
+      printMsg(text1); // printMsg 선언 전 호출
+      function printMsg(msg) {
+        // printMsg 함수 선언
+        document.write("printMsg함수의 호출 메세지 : " + msg + "<br>");
+      }
+      printMsg(text2); // printMsg 선언 후 호출
+      //   함수 선언 전, 후 호출이 동일함 (Python과 다름)
+      //  Python 은 함수 선언 후에 호출해야 함
+    </script>
+  </body>
+</html>
