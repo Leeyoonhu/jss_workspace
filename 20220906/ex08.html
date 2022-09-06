@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 태어난 해를 입력하면 띠를 출력하기 -->
+    <!-- switch-case 사용할 것 -->
+    <script>
+      const year = Number(prompt("태어난 해를 입력해주세요"));
+      var ddi = null;
+      switch (year % 12) {
+        case 0:
+          alert(year + "년에 태어난 경우 잔나비띠입니다.");
+          break;
+        case 1:
+          alert(year + "년에 태어난 경우 닭띠입니다.");
+          break;
+        case 2:
+          alert(year + "년에 태어난 경우 개띠입니다.");
+          break;
+        case 3:
+          alert(year + "년에 태어난 경우 돼지띠입니다.");
+          break;
+        case 4:
+          alert(year + "년에 태어난 경우 쥐띠입니다.");
+          break;
+        case 5:
+          alert(year + "년에 태어난 경우 소띠입니다.");
+          break;
+        case 6:
+          alert(year + "년에 태어난 경우 범띠입니다.");
+          break;
+        case 7:
+          alert(year + "년에 태어난 경우 토끼띠입니다.");
+          break;
+        case 8:
+          alert(year + "년에 태어난 경우 용띠입니다.");
+          break;
+        case 9:
+          alert(year + "년에 태어난 경우 뱀띠입니다.");
+          break;
+        case 10:
+          alert(year + "년에 태어난 경우 말띠입니다.");
+          break;
+        case 11:
+          alert(year + "년에 태어난 경우 양띠입니다.");
+          break;
+        default:
+          alert("띠를 입력해주세요");
+          break;
+      }
+    </script>
+  </body>
+</html>
