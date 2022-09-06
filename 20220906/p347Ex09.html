@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- book객체를 만든다, 이 객체는 title, author, price의 3개의 프로퍼티로 구성되며 
+    각 프로퍼티는 초기화됨(335, 336) -->
+    <h1>book 객체 만들기</h1>
+    <hr />
+    <script>
+      // 1. new object로 book객체만들고 출력
+      let book = new Object();
+      book.title = "HTML5";
+      book.author = "황기태";
+      book.price = 20000;
+      document.write(
+        "book : " + book.title + ", " + book.author + ", " + book.price + "<br>"
+      );
+      //   2. 리터럴 표기법으로 book객체 작성하고 출력
+      let book2 = {
+        title: "HTML6",
+        author: "황기태",
+        price: 20000,
+      };
+      document.write(
+        "book2 : " +
+          book2.title +
+          ", " +
+          book2.author +
+          ", " +
+          book2.price +
+          "<br>"
+      );
+      //   3. prototype book객체 작성하고 출력
+      function makeBook(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+      }
+      let book3 = new makeBook("HTML7", "왕기태", 30000);
+      document.write(
+        "book3 : " +
+          book3.title +
+          ", " +
+          book3.author +
+          ", " +
+          book3.price +
+          "<br>"
+      );
+    </script>
+  </body>
+</html>

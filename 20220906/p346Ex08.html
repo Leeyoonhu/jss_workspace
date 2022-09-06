@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>16개의 랜덤한 색 만들기</h1>
+    <hr />
+    <script>
+      let rgbList = [];
+      for (let i = 0; i < 16; i++) {
+        rgbList[i] = `rgb(${parseInt(Math.random() * 255)},${parseInt(
+          Math.random() * 255
+        )},${parseInt(Math.random() * 255)})`;
+      }
+      for (let i = 0; i < 16; i++) {
+        document.write(
+          `<div style="background : ${rgbList[i]};">` + rgbList[i] + "</div>"
+        );
+      }
+    </script>
+  </body>
+</html>
