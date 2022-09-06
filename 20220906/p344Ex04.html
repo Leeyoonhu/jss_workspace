@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let now = new Date();
+      let day = now.getDay();
+      if (day == 0) {
+        document.write("<style>body{background-color: pink;}</style>");
+      } else {
+        document.write("<style>body{background-color: gold;}</style>");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>일요일은 pink, 다른 요일은 gold 배경</h1>
+    <hr />
+    <script>
+      let dayOfWeek;
+      switch (day) {
+        case 1:
+          dayOfWeek = "월";
+          break;
+        case 2:
+          dayOfWeek = "화";
+          break;
+        case 3:
+          dayOfWeek = "수";
+          break;
+        case 4:
+          dayOfWeek = "목";
+          break;
+        case 5:
+          dayOfWeek = "금";
+          break;
+        case 6:
+          dayOfWeek = "토";
+          break;
+        case 0:
+          dayOfWeek = "일";
+          break;
+      }
+      document.write("오늘 : " + now.getDate() + "일," + dayOfWeek + "요일");
+    </script>
+  </body>
+</html>

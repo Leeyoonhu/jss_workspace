@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문자열 배열 다루기</h1>
+    <hr />
+    <script>
+      let names = new Array("wonsun", "jaemoonleee", "kitae", "gracehwang");
+      // 1.names 배열 각각 출력
+      document.write("이름 : ");
+      for (let i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+      }
+      document.write("<br>가장 긴 이름 : ");
+      let length = names[0].length;
+      let longName;
+      for (let i = 0; i < names.length; i++) {
+        if (length < names[i].length) {
+          length = names[i].length;
+        }
+      }
+      for (let i = 0; i < names.length; i++) {
+        if (length == names[i].length) {
+          longName = names[i];
+        }
+      }
+      document.write(longName + "<br>가장 먼저 나오는 이름 : ");
+      let length2 = names[0];
+      for (let i = 0; i < names.length; i++) {
+        if (length2 > names[i]) {
+          length2 = names[i];
+        }
+      }
+      document.write(length2 + "<br>증가순 이름 : ");
+      names.sort();
+      for (let i = 0; i < names.length; i++) {
+        document.write(names[i] + " ");
+      }
+    </script>
+  </body>
+</html>

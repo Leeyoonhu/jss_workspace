@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 오전이면 배경색을 lightskyblue, 오후면 orange -->
+    <script>
+      let now = new Date();
+      let hour = now.getHours();
+      if (hour < 12) {
+        document.write("<style>body{background-color: lightskyblue;}</style>");
+      }
+      if (hour >= 12) {
+        document.write("<style>body{background-color: orange;}</style>");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>오전이면 lightskyblue, 오후이면 orange 배경</h1>
+    <hr />
+    <script>
+      document.write(
+        "현재 시간 : " +
+          hour +
+          "시," +
+          now.getMinutes() +
+          "분," +
+          now.getSeconds() +
+          "초"
+      );
+    </script>
+  </body>
+</html>
