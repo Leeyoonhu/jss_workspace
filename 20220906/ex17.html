@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 같은 이름의 익명 함수와 선언적 함수를 동시에 사용할 경우
+    익명 함수가 사용 됨 -->
+    <script>
+      let printMsg = function (msg) {
+        document.write("익명 함수 : " + msg + "<br>");
+      }; // var에선 익명 함수가 사용이 되지만, let은 이런 모호한 상황을 피하기위해 제한적인 상황을 더 많이 구현해두었음
+      //   let 으로 지정할 경우 이런 모호한 경우에선 오류 발생
+      function printMsg(msg) {
+        document.write("선언적 함수 : " + msg + "<br>");
+      }
+      // 두 함수 선언, 누가 사용될까?
+      printMsg("호출 되었습니다.");
+    </script>
+  </body>
+</html>

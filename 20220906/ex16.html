@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 익명 함수 예제1 -->
+    <!-- 함수 표현식으로 작성하는 방식
+    let 변수명 = function(parameter1, parameter2....){
+        실행문;
+    }
+    변수명 (args1, args2);
+    선언적 함수와 다르게 함수 선언전에 호출하면 안됨(python과 동일)
+    -->
+    <script>
+      let text1 = "함수 선언 전 호출 에러";
+      let text2 = "함수 선언 후 호출만 가능";
+      //   printMsg(text1);   선언 전 호출로 인해 에러 발생
+      var printMsg = function (msg) {
+        document.write("익명 함수 호출 메세지 : " + msg + "<br>");
+      };
+      printMsg(text2);
+    </script>
+  </body>
+</html>

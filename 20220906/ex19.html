@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 300p 6-23예제 진행 -->
+    <script>
+      function evalParseIntIsNan() {
+        let res = eval("2*3+4*6"); // 6+24
+        document.write('eval("2*3+4*6")은' + res + "<br>");
+        let m = parseInt("32"); // 문자열 32를 숫자로 변경
+        document.write('parseInt("32")는' + m + "<br>");
+        let n = parseInt("0x32"); // 문자열을 radix 진수로 해석하고 숫자로 변경
+        document.write('parseInt("0x32")는' + n + "<br>");
+        // "hello"는 정수로 변환할 수 없으므로 parseInt("hello") = NaN
+        n = parseInt("hello");
+        if (isNaN(n)) {
+          // n == NaN 일경우
+          document.write("hello는 숫자가 아닙니다.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>eval(), parseInt(), isNaN()</h3>
+    <hr />
+    <script>
+      evalParseIntIsNan();
+    </script>
+  </body>
+</html>

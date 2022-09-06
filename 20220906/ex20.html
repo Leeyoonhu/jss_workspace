@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- p301 구구단 만들기 -->
+    <script>
+      function gugudan(n) {
+        let m = parseInt(n);
+        if (isNaN(m) || m < 1 || m > 9) {
+          // m이 정수가 아니거나, 1보다 작거나, 9보다 클경우
+          alert("잘못입력하셨습니다.");
+          return;
+        } else {
+          for (let i = 1; i < 10; i++) {
+            document.write(m + " * " + i + " = " + m * i + "<br>");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>구구단 출력 함수 만들기</h3>
+    <hr />
+    <script>
+      let n = prompt("구구단 몇 단을 원하세요?", "");
+      gugudan(n);
+    </script>
+  </body>
+</html>
