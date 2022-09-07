@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <!-- 자손 & 부모 선택자 이전 예제 참조-->
+     <body>
+    <!-- 부모 body-->
+    <div>
+      <ul>
+        <!-- 자식 ul -->
+        <li>후손1</li>
+        <!-- 후손 li -->
+        <li>후손2</li>
+        <li>후손3</li>
+        <li>후손4</li>
+      </ul>
+    </div>
+    <h1><!-- 형제 h1 --></h1>
+    <script>
+      $(document).ready(function () {
+        $("body *").css("color", "red");
+        // 후손선택자(요소A 요소B) => body의 후손, 자식부터 그아래 모두다
+        // 후손 모두다 red로 바뀐 상태 
+      });
+    </script>
+</body>
+</html>

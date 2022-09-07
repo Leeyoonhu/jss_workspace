@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- 문서 객체 생성과 추가 예제1 -->
+    <script>
+      $(document).ready(function () {
+        for (let i = 0; i < 5; i++) {
+          // 문서 객체 5개 생성
+          $("<h1>Create Document Object + " + i + "</h1>")
+            .css({
+              background: "black",
+              color: "red",
+            })
+            .appendTo("body");
+          // css양식대로 생성된 객체를 body tag안에 추가
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <head>에 생성된 문서가 body라인에 있음을 생성기(f12)를 통해 확인가능 -->
+  </body>
+</html>

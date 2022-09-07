@@ -1,0 +1,53 @@
+<!-- bxSlider plugin -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- 위의 script는 bxSlider plugin의 cdn -->
+    <script>
+      // 이미지 슬라이더로 만들기 위한 추가작업
+      $(document).ready(function () {
+        $(".slide_gallery").bxSlider({
+          auto: true, // 슬라이드 자동 실행 : true
+          autoControls: true, // 슬라이더 제어기 출력 : true
+          stopAutoOnClick: true, // 이전 또는 다음 버튼 누르면 멈춤 : true
+          pager: true, // 현재 몇번째 이미지를 보는지 표시하는 불릿 출력 여부 : true
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="galler_wrap">
+      <ul class="slide_gallery">
+        <li>
+          <img src="../imageChickens/c1.jpg" alt="" />
+        </li>
+        <li>
+          <img src="../imageChickens/c2.png" alt="" />
+        </li>
+        <li>
+          <img src="../imageChickens/c3.jpg" alt="" />
+        </li>
+        <li>
+          <img src="../imageChickens/c4.png" alt="" />
+        </li>
+        <li>
+          <img src="../imageChickens/c5.jpg" alt="" />
+        </li>
+        <li>
+          <img src="../imageChickens/c6.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!-- Masonry 플러그인 -->
+<!-- cdn, js파일로 저장후 src첨부 등 여러 방식으로 인용가능 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        for (let i = 0; i < 50; i++) {
+          let y = Math.floor(Math.random() * 100) + 50;
+          // 1~100까지의 난수 + 50 == y
+          let imgUrl = "http://placeimg.com/100/" + y + "/any";
+          // 난수 y를 넣어서 랜덤 이미지의 주소를 저장한 imgUrl
+          $(`<img src="${imgUrl}">`)
+            .css({
+              // 가져온 랜덤 이미지의 스타일 지정
+              width: 100,
+              height: y,
+            })
+            .appendTo("body");
+        }
+        // masonry 플러그인 사용
+        $("body").masonry({
+          columnWidth: 110,
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

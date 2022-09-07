@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <!-- 다시 떠올리는 부모, 형제, 자손, 후손 선택자 -->
+  <!-- div기준 정리 -->
+  <body>
+    <!-- 부모 body-->
+    <div>
+      <ul>
+        <!-- 자식 ul -->
+        <li>후손1</li>
+        <!-- 후손 li -->
+        <li>후손2</li>
+        <li>후손3</li>
+        <li>후손4</li>
+      </ul>
+    </div>
+    <h1><!-- 형제 h1 --></h1>
+    <script>
+      $(document).ready(function () {
+        $("body>*").css("color", "red");
+        // 자식에게만 적용 (요소A>요소B)
+        // body>* ==> body의 모든 자식에게 적용
+        // 자식의 자식들은 부모의 속성을 적용받음 div만 색 변경상태
+      });
+    </script>
+  </body>
+</html>
