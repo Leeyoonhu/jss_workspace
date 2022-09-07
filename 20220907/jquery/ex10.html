@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 마우스 이벤트 처리 -->
+    <script>
+      $(document).ready(function () {
+        $("#box")
+          .css({
+            // id ="box"
+            width: 100,
+            height: 100,
+            background: "orange",
+          })
+          //   on안의 내용들은 event 처리(click = mouseUp + mouseDown임)
+          .on("click", function () {
+            $(this).css("background", "red");
+            // this => id = "box"인 자신을 의미
+            // 클릭시, 배경 빨강
+          })
+          .on("mouseenter", function () {
+            $(this).css("background", "blue");
+            // 마우스가 div안에있으면 파랑
+          })
+          .on("mouseleave", function () {
+            $(this).css("background", "orange");
+            // 마우스가 div밖으로 가면 오렌지
+          });
+      });
+    </script>
+    <div id="box"></div>
+  </body>
+</html>

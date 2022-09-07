@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 마우스 이벤트 예제 -->
+    <!-- 크기는 300 * 200, 클래스는 out, background : yellow, border -->
+    <!-- 박스안으로 마우스 들어오면 밑의 텍스트 변경 -->
+    <script>
+      let n = 0;
+      $(document).ready(function () {
+        $("div.out").mouseenter(function () {
+          // div의 class="out"이란 애의 마우스가 div안으로 들어오면
+          $("p:first", this).text("마우스 포인트 들어옴");
+          // 첫번째 p 태그의 텍스트 변경
+          $("p:last", this).text(++n);
+          // 마지막 p 태그 텍스트 변경
+        });
+        $("div.out").mouseleave(function () {
+          $("p:first", this).text("마우스 포인트 나감");
+          $("p:last", this).text("최종 횟수 :" + n);
+        });
+      });
+    </script>
+    <div
+      class="out"
+      style="
+        background: yellow;
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+      "
+    >
+      <p style="text-align: center">마우스 이벤트 알아보기</p>
+      <p style="text-align: center">0</p>
+    </div>
+  </body>
+</html>

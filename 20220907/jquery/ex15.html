@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 복합 이벤트 연결 -->
+    <!-- h1태그를 hover하면 배경색을 붉은색으로 할 것 -->
+    <script>
+      $(document).ready(function () {
+        $("h1").hover(
+          function () {
+            // h1태그에게 2가지 function()부여 // 복합 이벤트(하나의 이벤트(h1)에게 2개의 처리기(function())를 준것)
+            // hover일때
+            $(this).css({
+              background: "red",
+              color: "white",
+            });
+            // 아닐 때
+          },
+          function () {
+            $(this).css({
+              background: "",
+              color: "",
+            });
+          }
+        );
+      });
+    </script>
+    <h1>Click</h1>
+  </body>
+</html>

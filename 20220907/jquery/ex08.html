@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $("button.hide").click(function () {
+          $("p").hide();
+          // button태그의 .hide클래스를 클릭하면 p태그 숨김
+        });
+        $("button.show").click(function () {
+          $("p").show();
+          // button태그의 .show클래스를 클릭하면 p태그 보여줌
+        });
+      });
+    </script>
+    <p>문서 준비 이벤트에는 여러 다중 이벤트를 정의 할 수 있음</p>
+    <button class="hide">메시지 삭제</button>
+    <button class="show">메시지 보기</button>
+  </body>
+</html>

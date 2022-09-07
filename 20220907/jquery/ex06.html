@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 예제, 점점 옅어지는 배경색 -->
+    <script>
+      $(document).ready(function () {
+        // 문서 객체를 추가하는 jQuery
+        let output = "";
+        for (let i = 0; i < 256; i++) {
+          output += "<div></div>";
+        }
+        document.body.innerHTML = output;
+
+        // body 전체를 div태그로 채움
+        // 해당 div태그에 스타일을 적용
+        $("div").css({
+          height: 2,
+          backgroundColor: function (i) {
+            return "rgb(" + i + "," + i + "," + i + ")";
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

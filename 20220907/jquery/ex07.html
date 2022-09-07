@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- jQuery button event 예제1-->
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").hide();
+        });
+      });
+    </script>
+    <!-- 버튼을 클릭하면, p태그 안의 내용물 숨김 -->
+    <p>메시지 : 내 이름은 코난, 함정이죠.</p>
+    <button>함정 삭제</button>
+  </body>
+</html>

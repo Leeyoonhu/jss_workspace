@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $(img).attr({
+          alt: "속성 지정 연습",
+          src: function (index) {
+            var size = (index + 1) * 100;
+            return "http://placeimg.com/" + size + "/100/any";
+          },
+        });
+      });
+    </script>
+    <img src="http://placeimg.com/100/100/any" alt="" />
+    <img src="http://placeimg.com/200/100/any" alt="" />
+    <img src="http://placeimg.com/300/100/any" alt="" />
+    <img src="http://placeimg.com/400/100/any" alt="" />
+    <img src="http://placeimg.com/500/100/any" alt="" />
+  </body>
+</html>

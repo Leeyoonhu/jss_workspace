@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin: 5px;
+        background: yellow;
+        /* 초기 div태그의 크기 */
+      }
+      .box {
+        background: red;
+      }
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 연습문제 -->
+    <!-- 5개의 박스를 만들고, 박스들이 클릭될때마다 현재 width와 height를 -10씩 줄임(순서 상관x) -->
+    <script>
+      $(document).ready(function () {
+        let x = 100;
+        let y = 100;
+        $("div").click(function () {
+          // div태그를 클릭할때마다 width와 height가 10씩 줄어든 값이 set됨
+          $(this).width(x).addClass("box");
+          $(this).height(y).addClass("box");
+          x = x - 10;
+          y = y - 10;
+        });
+      });
+    </script>
+    <div>박스 1</div>
+    <div>박스 2</div>
+    <div>박스 3</div>
+    <div>박스 4</div>
+    <div>박스 5</div>
+  </body>
+</html>

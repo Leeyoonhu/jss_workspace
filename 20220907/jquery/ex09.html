@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 연습문제 -->
+    <!-- 정답보기 클릭시 정답이 나올수 있도록 jQuery를 이용하여 작성하기 -->
+    <script>
+      $(document).ready(function () {
+        $("a.q1").click(function () {
+          $("h3.a1").text("서울");
+        });
+        $("a.q2").click(function () {
+          $("h3.a2").text("숭례문");
+        });
+      });
+    </script>
+    <h1>질문 1 : 대한민국의 수도는 ?</h1>
+    <a href="#" class="q1">[정답 보기]</a>
+    <h3 class="a1"></h3>
+    <br />
+    <br />
+    <br />
+    <h1>질문 2 : 대한민국의 국보 1호는?</h1>
+    <a href="#" class="q2">[정답 보기]</a>
+    <h3 class="a2"></h3>
+  </body>
+</html>

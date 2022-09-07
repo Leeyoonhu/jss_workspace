@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* important와 blue class 정의 */
+      .important {
+        font-weight: bold;
+        font-size: large;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- jQuery css : addClass, removeClass -->
+    <!-- 특정 jQuery function()일때 css가 변경되게 -->
+    <script>
+      $(document).ready(function () {
+        $("button.add").click(function () {
+          // button중 class="add"인애가 클릭됬을때
+          $("h1, h2, p").addClass("blue");
+          // h1, h2, p 태그에 blue 클래스를 추가해준다
+          $("div").addClass("important");
+          // div 태그에 important 클래스를 추가해준다
+        });
+        $("button.remove").click(function () {
+          $("h1, h2, p").removeClass("blue");
+          $("div").removeClass("important");
+        });
+      });
+    </script>
+    <h1>HTML5</h1>
+    <h2>CSS3</h2>
+    <p>Java Script</p>
+    <div>jQuery</div>
+    <br />
+    <button class="add">css 적용 버튼</button>
+    <button class="remove">css 해제 버튼</button>
+  </body>
+</html>
