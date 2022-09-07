@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 문서 객체 생성(1/2) -->
+    <script>
+      function add() {
+        debugger;
+        var header = document.createElement("h3"); // 요소 노드 생성
+        var textNode = document.createTextNode("내 이름은 코난입니다."); // 텍스트 노드 생성
+        header.appendChild(textNode); // header에 textNode 결합
+        document.body.appendChild(header); // body line 에 header 추가
+      }
+    </script>
+    <a href="#" onclick="add()">당신의 이름은 무엇입니까?</a>
+    <!-- a tag 클릭시 add()함수 사용 -->
+    <!-- debugger와 탐색기를 통해서 한줄씩 해독 가능 -->
+  </body>
+</html>

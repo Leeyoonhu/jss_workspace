@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 문서 객체 생성(2/2) -->
+    <ul id="coffeeList">
+      <li>americano</li>
+      <li>latte</li>
+    </ul>
+
+    <p>목록에 아이템 추가</p>
+    <button onclick="myFunc()">추가</button>
+    <!-- 버튼을 누르면 myFunc() 함수 작동 -->
+
+    <script>
+      function myFunc() {
+        // 우선 속성(요소) 부터 맞춰주고
+        var node = document.createElement("li");
+        // 추가할 아이템 이름 작성
+        var textNode = document.createTextNode("cappuccino");
+        node.appendChild(textNode);
+        // 요소의 자식 노드로 아이템 이름 병합
+        document.getElementById("coffeeList").appendChild(node);
+        // id="coffeeList"인 놈의 자식노드로 node를 병합
+      }
+    </script>
+  </body>
+</html>
