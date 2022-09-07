@@ -33,4 +33,14 @@
     글자 조작
     - innerHTML : HTML tag 적용됨
     - textContent  : HTML tag 적용안됨 (<h1>..이런태그들도 함께 출력)
+
+
+    스타일 조작
+    - js로 css속성 값을 추가/변경/제거 가능
+    - js는 -를 식별자에 넣을 수 없음 ex) background-color ==> backgroundColor (낙타표기법) 적용
+
+
+    속성 조작
+    - setAttribute(속성 이름, 속성 값) : 속성값을 지닌 속성 지정
+    - getAttribute(속성 이름) : 속성 추출
 */

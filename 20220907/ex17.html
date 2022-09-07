@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 스타일 조작 예제1 -->
+    <script>
+      window.onload = function () {
+        let output = "";
+        for (let i = 0; i < 256; i++) {
+          output += "<div></div>";
+        }
+        document.body.innerHTML = output;
+        // body의 모든 내용을 <div></div>태그로 채움(0부터 255까지)
+        let divs = document.querySelectorAll("div");
+        document.getElementById("");
+
+        // div 선택자 모두를 담은 divs 배열
+        for (let i = 0; i < divs.length; i++) {
+          let div = divs[i];
+          // divs의 길이만큼 각 배열 인덱스의 rgb값을 변경
+          div.style.height = "2px";
+          div.style.background = "rgb(" + i + "," + i + "," + i + ")";
+          // rgb값이 동일할 때 gray값이므로 점점 옅어지는 gray값이 출력될것임
+        }
+      };
+    </script>
+  </body>
+</html>

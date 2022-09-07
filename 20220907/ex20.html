@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 속성을 조작해서 불러오기 예제2 -->
+    <script>
+      window.onload = function () {
+        let clock = document.getElementById("clock");
+        setInterval(
+          // setInterval(행할것, 간격) => 현 예제에서 함수를 1000ms, 즉 1초마다 실행시키라고 하고있음
+          function () {
+            let now = new Date();
+            // 현재 시간을 담고있는 now
+            clock.innerHTML = now.toString();
+          },
+          // 아이디가 clock인 애들의 내용물을 현재시간으로 저장
+          1000
+          // 1000밀리 세컨드마다 실행 ==> 1초
+        );
+      };
+    </script>
+    <h1 id="clock"></h1>
+  </body>
+</html>
