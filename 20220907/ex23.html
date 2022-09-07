@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- event 예제3 -->
+    <!-- 브라우저의 객체들마다 기본적으로 지닌 event들이 있음 -->
+    <!-- ex) <a>태그의 링크를 누르면 page 이동 -->
+    <!-- 이미 있는 이벤트를 제거하는 예제를 진행 -->
+    <script>
+      window.onload = function () {
+        let button = document.getElementById("deletedEvent");
+        button.onclick = function () {
+          // id = "button"인애들을 누르면
+          return false;
+          // 이벤트를 제거함
+        };
+      };
+    </script>
+    <!-- 이벤트가 제거된 <a>와 그러지 않은 <a>확인 -->
+    <h1>둘 중에 하나는 가짜임</h1>
+    <a href="https://www.naver.com" id="deletedEvent">진짜로 naver로 이동</a>
+    <br />
+    <a href="https://www.naver.com">나는 가짜인척하는 진짜임</a>
+  </body>
+</html>

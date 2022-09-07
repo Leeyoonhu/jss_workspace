@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 입력 양식 포커스 자동 설정 -->
+    <!-- 앞의 6자리를 다채우면 자동으로 뒷칸으로 보내주고 -->
+    <!-- 뒷칸을 다 지우면 앞칸으로 보내줌 -->
+    <script>
+      window.onload = function () {
+        let input_1 = document.querySelectorAll("input")[0];
+        // 식별자 input인 애의 1번째 정보
+        let input_2 = document.querySelectorAll("input")[1];
+        // 식별자 input인 애의 2번째 정보
+        input_1.onkeydown = function (event) {
+          if (6 <= input_1.value.length) {
+            input_2.focus();
+            // 첫번째 input칸의 value의 길이가 6보다 크거나 같을경우
+            // 2번째 input칸으로 focus해준다(커서 이동)
+          }
+        };
+        // event 매개변수를 받는 input_2.onKeyDown
+        input_2.onkeydown = function (event) {
+          let event2 = event || window.event;
+          console.log(event2); // input_2에 입력할때마다 콘솔에 출력
+          if (input_2.value.length == 0 && event.keyCode == 8) {
+            input_1.focus();
+            // 2번째 input칸의 value의 길이가 0임과 동시에, event의 keycode가 backspace였을 경우에
+            // 1번째 input칸으로 focus해준다(커서 이동)
+          }
+        };
+      };
+      // keycode == 8 ==> backspace를 의미
+    </script>
+    <input type="text" maxlength="6" />
+    <span>-</span>
+    <input type="text" maxlength="7" />
+  </body>
+</html>

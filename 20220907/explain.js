@@ -43,4 +43,10 @@
     속성 조작
     - setAttribute(속성 이름, 속성 값) : 속성값을 지닌 속성 지정
     - getAttribute(속성 이름) : 속성 추출
+
+
+    Event 
+    - 객체의 상태 변화
+    - 속성(property), 이름(name)또는 타입(type), 리스너(listener)또는 핸들러(handler)
+    ex) window.onload = function(){} => 속성: onload, 이름: window, 핸들러: function(){}
 */
