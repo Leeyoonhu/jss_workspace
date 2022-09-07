@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 문서 객체 선택 후 조작 예제2 -->
+    <script>
+      window.onload = function () {
+        // script이후에 선택자가 생성되도 실행
+        var header = document.querySelector("h1");
+        // 선택자가 h1인애 선택
+        // header 변수 (문서 객체) 조작
+        header.style.color = "orange";
+        header.style.background = "red";
+        header.innerHTML = "From JavaScript";
+      };
+    </script>
+    <h1>Header</h1>
+    <!-- querySelector는 가장 상단의 선택자 1개만 선택하기때문에 제일 상단 Header만 조작됨 -->
+    <h1>Header</h1>
+    <h1>Header</h1>
+  </body>
+</html>

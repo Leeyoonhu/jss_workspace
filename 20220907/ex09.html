@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 웹 페이지 생성 순서(1/4) -->
+  <!-- script가 html태그보다 먼저 작성될 경우  -->
+  <!-- document.querySelector(선택자) => 선택자를 찾음 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.querySelector("h1").style.backgroundColor = "red";
+      // 선택자 h1인 애의 스타일. 배경색을 붉은색
+      document.querySelector("h2").style.color = "red";
+      // 선택자 h1인 애의 스타일. 글씨색을 붉은색
+    </script>
+  </head>
+  <body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+    <!-- 만들어둔 script가 적용되지 않은 이유는
+    h1, h2 태그(선택자)가 메모리에 생성되기 전에 querySelector로 찾았기 때문에-->
+    <!-- Uncaught TypeError: Cannot read properties of null (reading 'style')
+    at ex09.html:12:35 오류 발생 -->
+  </body>
+</html>

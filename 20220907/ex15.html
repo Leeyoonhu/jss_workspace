@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ex14.html의 모든 header를 ex13.html처럼 바꾸기 -->
+    <script>
+      window.onload = function () {
+        var header = document.querySelectorAll("h1");
+        for (let i = 0; i < header.length; i++) {
+          header[i].style.color = "orange";
+          header[i].style.background = "red";
+          header[i].innerHTML = "From JavaScript";
+        }
+      };
+    </script>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+  </body>
+</html>
