@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #slide,
+      #panel,
+      #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #00b0f0;
+        border: 1px solid #c3c3c3;
+      }
+      #panel {
+        padding: 70px;
+        display: none;
+        background-color: #ff0;
+      }
+    </style>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 메소드 체이닝 -->
+    <!-- function()내에 연속적인 동작을 조정 -->
+    <!-- function()내에 연달아서 되있는 동작들은 Queue에 저장이 됨 -->
+    <script>
+      $(document).ready(function () {
+        $("#slide").click(function () {
+          $("#panel")
+            .css({
+              color: "red",
+            })
+            // method chaining 연속동작 지정
+            .slideDown(2000)
+            .slideUp(6000)
+            .fadeTo("slow", 0.3);
+        });
+      });
+    </script>
+    <div id="slide">[저는 슬라이드 에요]</div>
+    <div id="panel">
+      [저는 판넬인데 슬라이드가 절 조작해요] <br />
+      [슬라이드를 한번만 눌러도 알아서 행동해요]
+    </div>
+  </body>
+</html>

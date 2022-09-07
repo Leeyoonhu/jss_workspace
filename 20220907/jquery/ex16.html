@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 생명이 없는것을 움직이게 하는것을 animate이라고 함 -->
+    <!-- animate() 예제1 -->
+    <!-- 버튼 3개를 만들고 img tag에 이미지를 놓고, 버튼을 누를때마다 img size가 변경되게 할것 -->
+    <script>
+      $(document).ready(function () {
+        $("button.b1").click(function () {
+          $("img").animate({
+            width: "100px",
+          });
+        });
+        $("button.b2").click(function () {
+          $("img").animate({
+            width: "200px",
+          });
+        });
+        $("button.b3").click(function () {
+          $("img").animate({
+            width: "300px",
+          });
+        });
+      });
+    </script>
+    <button class="b1">작은 코난</button> <br />
+    <button class="b2">중간 코난</button> <br />
+    <button class="b3">큰 코난</button> <br />
+    <img src="../image/conan.jpg" alt="코난 없다" />
+  </body>
+</html>

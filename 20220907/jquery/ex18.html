@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 연습문제 -->
+    <!-- hide, show, toggle 만들기 -->
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("img").hide("slow");
+          // id ="hide"인 애를 클릭하면, img태그가 천천히 숨음
+        });
+        $("#show").click(function () {
+          $("img").show("fast");
+          // id="show"인애를 클릭하면, img 태그가 빠르게 보여줌
+        });
+        $("#toggle").click(function () {
+          $("img").toggle(3000);
+          // id="toggle"인애를 클릭하면, img태그가 3초마다 show&hide함
+        });
+      });
+    </script>
+    <button id="hide">느릿느릿 숨기기</button> <br />
+    <button id="show">빠릿빠릿 보이기</button> <br />
+    <button id="toggle">난 토글이 아니에요</button> <br />
+    <h1>장난감 코난</h1>
+    <img src="../image/conan.jpg" alt="함정" />
+  </body>
+</html>
