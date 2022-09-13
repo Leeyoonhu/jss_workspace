@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../20220907/jquery/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 위치 필터 선택자 -->
+    <!-- 요소:odd(홀수), even(짝수), first, last -->
+    <table>
+      <tr>
+        <th>이름</th>
+        <th>혈액형</th>
+        <th>주소</th>
+      </tr>
+      <tr>
+        <th>코난</th>
+        <th>A형</th>
+        <th>미란이네</th>
+      </tr>
+      <tr>
+        <th>장미</th>
+        <th>B형</th>
+        <th>브라운박사네</th>
+      </tr>
+      <tr>
+        <th>미란</th>
+        <th>AB형</th>
+        <th>미란이네</th>
+      </tr>
+      <tr>
+        <th>키드</th>
+        <th>O형</th>
+        <th>모름</th>
+      </tr>
+    </table>
+    <script>
+      $(document).ready(function () {
+        $("tr:odd").css("background", "#f9f9f9");
+        // 홀수 행 배경색 지정
+        $("tr:even").css("background", "#9f9f9f");
+        // 짝수 행 배경색 지정
+        $("tr:first").css("background", "#000000").css("color", "#ffffff");
+        // 첫 행 배경색 지정, 글씨색 지정
+      });
+    </script>
+  </body>
+</html>

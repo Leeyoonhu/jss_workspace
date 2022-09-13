@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 배열 관리 -->
+    <!-- each(): 매개변수로 입력한 함수로 for 반복문처럼 객체, 배열요소 검사하는 메서드 -->
+    <!-- ex) $.each(obj, function(index, item){}) -->
+    <!-- (selector).each(function(index, item){}) -->
+    <script>
+      $(document).ready(function () {
+        let array = [
+          { name: "naver", link: "http://www.naver.com" },
+          { name: "daum", link: "http://www.daum.net" },
+          { name: "google", link: "http://www.google.com" },
+        ];
+        $.each(array, function (index, item) {
+          let output = "";
+          //   문자열 output에 배열의 객체안 요소들을 꺼내 a태그와 h1태그안에 넣음
+          output += `<a href="${item.link}">`;
+          output += `<h1>${item.name}</h1>`;
+          output += "</a>";
+          document.body.innerHTML += output;
+          //   body안의 innerHTML에 모두 a태그 추가
+        });
+      });
+    </script>
+  </body>
+</html>

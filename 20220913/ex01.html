@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../20220907/jquery/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 필터 선택자 예제 (요소:필터선택자) -->
+    <!-- 옵션중 선택된 놈의 값 알림창에 띄움 -->
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          // value변수에 select>option태그에서 선택된 놈의 값을 저장
+          let value = $("select > option:selected").val();
+          alert(value);
+        });
+      });
+    </script>
+    <select>
+      <option>Apple</option>
+      <option>Orange</option>
+      <option>Starwberry</option>
+      <option>Banana</option>
+    </select>
+  </body>
+</html>

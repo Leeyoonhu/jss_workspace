@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <style>
+      .highlight-0 {
+        background: yellow;
+      }
+      .highlight-1 {
+        background: orange;
+      }
+      .highlight-2 {
+        background: blue;
+      }
+      .highlight-3 {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .each() 메소드를 사용하여 스타일 적용하기 -->
+    <h1>item-0</h1>
+    <h1>item-1</h1>
+    <h1>item-2</h1>
+    <h1>item-3</h1>
+    <script>
+      $(document).ready(function () {
+        $("h1").each(function (index, item) {
+          // h1각각요소에 인덱스에 해당하는 스타일 클래스 add
+          $(item).addClass(`highlight-${index}`);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 함수 필터 선택자 -->
+    <!-- 가급적 태그안에 인라인스타일 지정하지말것 -->
+    <table>
+      <tr>
+        <td>이름</td>
+        <td>혈액형</td>
+        <td>주소</td>
+      </tr>
+      <tr>
+        <td>코난</td>
+        <td>A형</td>
+        <td>미란이네</td>
+      </tr>
+      <tr>
+        <td>장미</td>
+        <td>B형</td>
+        <td>브라운박사네</td>
+      </tr>
+      <tr>
+        <td>미란</td>
+        <td>AB형</td>
+        <td>미란이네</td>
+      </tr>
+      <tr>
+        <td>키드</td>
+        <td>O형</td>
+        <td>모름</td>
+      </tr>
+    </table>
+    <script>
+      $(document).ready(function () {
+        $("tr:eq(0)").css("background", "").css("color", "white");
+        $("td:nth-child(3n+1)").css("background", "#565656");
+        $("td:nth-child(3n+2)").css("background", "#a9a9a9");
+        $("td:nth-child(3n)").css("background", "#f9f9f9");
+      });
+    </script>
+  </body>
+</html>

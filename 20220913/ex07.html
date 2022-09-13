@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <!-- 익명 콜백 함수 // 앞의 예제와 차이는 변수를 인자로 받냐, 함수를 인자로 받냐 차이 -->
+    <script>
+      // 함수 선언
+      function callTreeTimes(callback) {
+        for (let i = 0; i < 3; i++) {
+          callback();
+        }
+      }
+      // 함수 호출
+      callTreeTimes(function () {
+        alert("함수 호출");
+      });
+      // args로 callback변수 선언없이 함수를 직접 인자로 받음
+    </script>
+  </body>
+</html>
