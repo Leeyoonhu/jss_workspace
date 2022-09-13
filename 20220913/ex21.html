@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- window객체의 location 메서드 ==> 주소창 -->
+    <script>
+      function load() {
+        let select = document.getElementById("site");
+        window.location = select.options[select.selectedIndex].value;
+        // location 에 선택된 인덱스 값을 저장
+      }
+    </script>
+    <h3>window.location으로 접속하기</h3>
+    <hr />
+    사이트 선택 :
+    <select name="" id="site">
+      <option value="http://www.naver.com">naver</option>
+      <option value="http://www.google.com">google</option>
+      <option value="http://www.daum.net">daum</option>
+    </select>
+    <p>
+      <button onclick="load()">웹 사이트 접속</button>
+      <!-- 옵션을 선택하고 버튼을 클릭하면 load()함수 호출 -->
+    </p>
+  </body>
+</html>

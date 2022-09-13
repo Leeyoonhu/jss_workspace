@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- window 객체의 setTimeout()과 setInterval() 메서드 차이 숙지 -->
+    <!-- setInterval() ==> 타임아웃 코드 반복 호출 -->
+    <!-- p454 예제10-4 -->
+    <h3>텍스트가 자동 회전하며, 마우스로 클릭시 중단합니다.</h3>
+    <hr />
+    <div>
+      <span id="span" style="background-color: yellow">
+        자동 회전하는 텍스트 입니다.
+      </span>
+    </div>
+    <script>
+      let span = document.getElementById("span");
+      let timerID = setInterval("doRotate()", 200);
+      // 0.2초마다 doRotate()함
+      // 첫글자가 뒤로 계속갈듯
+
+      span.onclick = function (e) {
+        clearInterval(timerID);
+        // span클릭시 interval clear
+      };
+
+      function doRotate() {
+        let str = span.innerHTML;
+        let firstChar = str.substr(0, 1);
+        // 첫글자
+        let remains = str.substr(1, str.length - 1);
+        // 나머지
+        str = remains + firstChar;
+        span.innerHTML = str;
+      }
+    </script>
+  </body>
+</html>

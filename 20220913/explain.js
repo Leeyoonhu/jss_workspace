@@ -42,8 +42,9 @@ body {
 
 
     브라우저 객체 모델 [BOM]
-    windows 객체
+    windows 객체(p461 참조)
     생성메서드 open(url, name, features, replace)
-    
+    - location => 주소창
+    - history = .back() // .forward() => 이전, 다음 페이지(.go(1) or .go(-1))
 
 */

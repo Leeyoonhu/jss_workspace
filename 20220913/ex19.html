@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- window 객체의 setTimeout()과 setInterval() 메서드 차이 숙지 -->
+    <!-- setTimeout() ==> 타임아웃 코드 1회 호출 -->
+    <!-- p453 예제10-3 -->
+    <h3>이미지에 마우스를 올리고 5초간 그대로 있을 경우 사이트로 이동</h3>
+    <hr />
+    <img
+      id="img"
+      src="media/naver.gif"
+      alt=""
+      onmouseover="startTimer(5000)"
+      onmouseout="cancleTimer()"
+    />
+    <script>
+      let timerId = null;
+      function startTimer(time) {
+        // 타이머 시작
+        timerId = setTimeout("load('http//www.naver.com')", time);
+        // timerId는 time마다 지정 url을 load한다(1번만)
+        document.getElementById("img").title = "타이머 작동 시작....";
+      }
+      function cancleTimer() {
+        // 타이머 중단
+        clearTimeout(timerId);
+      }
+      function load(url) {
+        // 매개변수 url을 location으로 설정
+        // 주소창 입력란이 window.location
+        window.location = url;
+      }
+    </script>
+  </body>
+</html>
