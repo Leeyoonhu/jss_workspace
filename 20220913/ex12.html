@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <!-- 유효성 검사로 데이터 길이 확인하기
+    document.폼이름.입력양식이름.value.length
+    -->
+    <script>
+      // 이름 길이 6자미만이거나 12이상일때
+      function checkForm() {
+        if (
+          document.frm.name.value.length < 6 ||
+          document.frm.name.value.length > 12
+        ) {
+          alert("이름을 6~12자 이내로 입력하세요.");
+          document.frm.name.select();
+        }
+      }
+    </script>
+    <form action="" name="frm">
+      이름: <input type="text" name="name" />
+      <input type="submit" value="제출" onclick="checkForm()" />
+    </form>
+  </body>
+</html>
