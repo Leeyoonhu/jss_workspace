@@ -83,6 +83,7 @@
               }
               $("article").removeClass("show");
               $(`article:nth-of-type(${currentPosition})`).addClass('show');
+            //   currentPosition 째의 article에 show class 부여
           })
           $("#character > a:nth-child(2)").click(function(){
               // 우로 이동시 +1, 3보다 크면 3 >> 1으로

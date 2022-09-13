@@ -212,5 +212,5 @@ article > p {
 }
 a {
   z-index: 9999;
-  /* 더 높게 */
+  /* a태그의 속성을 article 보다 더 높게 */
 }
