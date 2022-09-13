@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./myMovieCss.css" />
+  </head>
+  <body>
+    <hgroup id="title">
+      <h1 data-name="information">Information</h1>
+      <h1 data-name="character">Character</h1>
+      <h1 data-name="multimedia">Multimedia</h1>
+    </hgroup>
+    <section id="container">
+      <div id="main" data-name="main" class="active">
+        <img src="./images/miran.jpg" alt="" width="50%" />
+      </div>
+      <div id="information" data-name="information">
+        <img src="./images/conan.jpg" alt="" width="40%" />
+        <div class="description">
+          <p>
+            애니메이션 인기에 기대어 저퀄리티를 남발하는 일본 애니메이션 극장판
+            시리즈들 중에서 전체적으로 고퀄리티로 평가받는다.
+          </p>
+        </div>
+      </div>
+      <div id="character" data-name="character"></div>
+      <div id="multimedia" data-name="multimedia">
+        <!-- <video src="" controls="controls"></video> -->
+      </div>
+    </section>
+    <nav id="main_navigation">
+      <ul>
+        <li><a href="#" data-target="information">Movie Info</a></li>
+        <li><a href="#" data-target="character">Character</a></li>
+        <li><a href="#" data-target="multimedia">Multimedia</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </nav>
+    <script>
+      $(document).ready(function () {
+        // #main_navigation의 후손 a들을 클릭할때마다(메뉴쪽 nav>ul>li>a들)
+        $("#main_navigation a").click(function () {
+          // target에 a들의 data-target속성 알림창으로 띄움
+          let target = $(this).attr("data-target");
+          alert(target);
+          // data-name이 target이 아닌애들의 클래스 active 삭제
+          $(`:not([data-name=${target}])`).removeClass("active");
+          // data-name이 target인 애는 클래스 acitve 더함
+          $(`[data-name=${target}]`).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+html {
+  height: 100%;
+  overflow: hidden;
+  background: url("images/background.jpg");
+  background-size: cover;
+}
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 
+    (정 중앙 배치할경우)
+    margin-left: -480px;
+    margin-top: -275px; 
+    */
+  margin-left: -720px;
+  margin-top: -275px;
+  width: 960px;
+  height: 550px;
+  background: url("images/background2.jpg");
+  background-size: cover;
+}
+#container {
+  height: 500px;
+}
+#main_navigation > ul {
+  overflow: hidden;
+}
+#main_navigation > ul > li {
+  float: left;
+}
+#main_navigation > ul > li > a {
+  display: block;
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  text-indent: -9999px;
+  background: url("images/navigation_button.png");
+}
+#main_navigation > ul > li:nth-child(1) > a {
+  background-position: 0px 0px;
+}
+#main_navigation > ul > li:nth-child(2) > a {
+  background-position: 0px -100px;
+}
+#main_navigation > ul > li:nth-child(3) > a {
+  background-position: 0px -200px;
+}
+#main_navigation > ul > li:nth-child(4) > a {
+  background-position: 0px -300px;
+}
+#main_navigation > ul > li:nth-child(1) > a:hover {
+  background-position: 0px -50px;
+}
+#main_navigation > ul > li:nth-child(2) > a:hover {
+  background-position: 0px -150px;
+}
+#main_navigation > ul > li:nth-child(3) > a:hover {
+  background-position: 0px -250px;
+}
+#main_navigation > ul > li:nth-child(4) > a:hover {
+  background-position: 0px -350px;
+}
+#title {
+  position: absolute;
+  left: 0;
+  top: -48px;
+  width: 240px;
+  height: 48px;
+  overflow: hidden;
+}
+/* 클릭(active)된 애만 상단에 보이게끔 처리할것임 */
+#title > h1 {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  width: 240px;
+  height: 48px;
+  background: url("images/titles.png");
+  opacity: 1;
+  text-indent: -9999px;
+  transition-duration: 1s;
+  /* 바뀌는데 걸리는 시간 */
+}
+#title > h1.active {
+  top: 0;
+}
+/* active클래스일 경우 상단으로 올림 */
+#title > h1:nth-child(1) {
+  background-position: 0px 0px;
+}
+#title > h1:nth-child(2) {
+  background-position: 0px -50px;
+}
+#title > h1:nth-child(3) {
+  background-position: 0px -98px;
+}
