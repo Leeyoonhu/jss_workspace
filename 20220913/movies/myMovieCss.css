@@ -34,7 +34,12 @@ body {
   background-size: cover;
 }
 #container {
+  position: relative;
   height: 500px;
+  width: 100%;
+  padding: 0 40px;
+  margin-left: -40px;
+  overflow: hidden;
 }
 #main_navigation > ul {
   overflow: hidden;
@@ -107,4 +112,105 @@ body {
 }
 #title > h1:nth-child(3) {
   background-position: 0px -98px;
+}
+
+div[data-name] {
+  position: absolute;
+  left: 40px;
+  top: 550px;
+  width: 960px;
+  height: 500px;
+  transition-duration: 2s;
+}
+div[data-name].active {
+  top: 0;
+}
+div[data-name="main"] > img {
+  position: absolute;
+}
+div[data-name="information"] > div {
+  position: absolute;
+  left: 450px;
+  top: 30px;
+  width: 480px;
+  font-family: "Times New Roman", Times, serif;
+  color: aquamarine;
+  font-size: 1.2em;
+}
+div[data-name="multimedia"] {
+  padding: 10px;
+}
+div[data-name="character"] > a {
+  /* 크기 설정 */
+  display: block;
+  width: 39px;
+  height: 39px;
+  /* 이미지 설정 및 글자 안보이게 */
+  text-indent: -9999px;
+  background: url("images/arrowImage.png");
+}
+div[data-name="character"] > a:nth-child(1) {
+  /* 스프라이트 이미지 설정 */
+  background-position: 0px 0px;
+  /* 위치 설정 */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -20px;
+}
+div[data-name="character"] > a:nth-child(2) {
+  background-position: 0px -39px;
+  /* 위치 설정 */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -20px;
+}
+/* div[data-name="character"]에서의 이벤트 구현(article)*/
+div[data-name="character"] > article {
+  width: 960px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 500px;
+  transition-duration: 2s;
+}
+div[data-name="character"] > article.show {
+  top: 0;
+}
+article {
+  position: relative;
+}
+article > h1 {
+  /* 위치 설정 */
+  position: absolute;
+  left: 90px;
+  top: 60px;
+  /* 크기 설정 */
+  font-size: 30px;
+  color: white;
+}
+article > img {
+  /* 위치 설정 */
+  position: absolute;
+  left: 100px;
+  top: 120px;
+  width: 300px;
+  /* 그림자 설정 */
+  box-shadow: 0 5px 10px 0px;
+  border-radius: 10px;
+}
+article > p {
+  /* 위치 설정 */
+  position: absolute;
+  left: 480px;
+  top: 110px;
+  color: white;
+  font-size: 1.4em;
+  /* 크기 설정 */
+  width: 420px;
+}
+a {
+  z-index: 9999;
+  /* 더 높게 */
 }

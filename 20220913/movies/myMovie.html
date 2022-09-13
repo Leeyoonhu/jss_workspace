@@ -16,18 +16,38 @@
     </hgroup>
     <section id="container">
       <div id="main" data-name="main" class="active">
-        <img src="./images/miran.jpg" alt="" width="50%" />
+        <img src="./images/conan.jpg" alt="" width="100%" />
       </div>
       <div id="information" data-name="information">
-        <img src="./images/conan.jpg" alt="" width="40%" />
+        <img src="./images/miran.jpg" alt="" width="40%" height="100%" />
         <div class="description">
-          <p>
-            애니메이션 인기에 기대어 저퀄리티를 남발하는 일본 애니메이션 극장판
-            시리즈들 중에서 전체적으로 고퀄리티로 평가받는다.
-          </p>
+          <strong>No.013 뿔충이</strong><br />
+          뿔충이의 몸 크기는 30cm 정도밖에 안되지만 머리와 꼬리에는 독이
+          들어있는 강력한 침이 있기 때문에 무작정 다가가는 것은 위험하다.
+          평소에는 잎사귀 밑에서 숨어 지낸다. 또 뿔충이는 딸기나무를 좋아해서
+          어쩔땐 딸기나무의 형체가 없어질 정도로 먹는다고 한다.
         </div>
       </div>
-      <div id="character" data-name="character"></div>
+      <div id="character" data-name="character">
+        <a href="#">Left Button</a>
+        <a href="#">Right Button</a>
+        <article class="show">
+            <h1>코난</h1>
+            <img src="./images/conan.jpg" alt=""></img>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ullam sint minus vel necessitatibus minima rerum facere qui alias porro, provident nemo! Soluta enim veritatis quisquam inventore temporibus et tempora?
+            </p>
+        </article>
+        <article>
+            <h1>미란이</h1>
+            <img src="./images/miran.jpg" alt=""></img>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae consequatur officiis ab eligendi voluptatum vero possimus quis fugit ducimus eius ipsam eum ipsa, laborum voluptates quo quasi, facilis numquam rem.</p>
+        </article>
+        <article>
+            <h1>장미</h1>
+            <img src="./images/rose.jpg" alt=""></img>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident minima nihil velit architecto, consequatur debitis excepturi ut animi tenetur dicta eos illum repudiandae maxime repellendus libero dolorum minus. Eaque, distinctio.</p>
+        </article>
+      </div>
       <div id="multimedia" data-name="multimedia">
         <!-- <video src="" controls="controls"></video> -->
       </div>
@@ -42,17 +62,39 @@
     </nav>
     <script>
       $(document).ready(function () {
-        // #main_navigation의 후손 a들을 클릭할때마다(메뉴쪽 nav>ul>li>a들)
-        $("#main_navigation a").click(function () {
-          // target에 a들의 data-target속성 알림창으로 띄움
-          let target = $(this).attr("data-target");
-          alert(target);
-          // data-name이 target이 아닌애들의 클래스 active 삭제
-          $(`:not([data-name=${target}])`).removeClass("active");
-          // data-name이 target인 애는 클래스 acitve 더함
-          $(`[data-name=${target}]`).addClass("active");
-        });
-      });
+          // #main_navigation의 후손 a들을 클릭할때마다(메뉴쪽 nav>ul>li>a들)
+          $("#main_navigation a").click(function () {
+              // target에 a들의 data-target속성 알림창으로 띄움
+              let target = $(this).attr("data-target");
+              alert(target);
+              // data-name이 target이 아닌애들의 클래스 active 삭제
+              $(`:not([data-name=${target}])`).removeClass("active");
+              // data-name이 target인 애는 클래스 acitve 더함
+              $(`[data-name=${target}]`).addClass("active");
+            });
+            // 캐릭터 이동버튼 구현(이벤트 처리)
+            // 디폴트값 1
+            let currentPosition = 1;
+          $("#character > a:nth-child(1)").click(function(){
+              // 좌로 이동시 -1, 1보다 작으면 1 >> 3으로
+              currentPosition -= 1;
+              if(currentPosition < 1){
+                  currentPosition = 3;
+              }
+              $("article").removeClass("show");
+              $(`article:nth-of-type(${currentPosition})`).addClass('show');
+          })
+          $("#character > a:nth-child(2)").click(function(){
+              // 우로 이동시 +1, 3보다 크면 3 >> 1으로
+              currentPosition += 1;
+              if(currentPosition > 3){
+                  currentPosition = 1;
+              }
+              $("article").removeClass("show");
+            $(`article:nth-of-type(${currentPosition})`).addClass('show');
+          })
+    });
+
     </script>
   </body>
 </html>
