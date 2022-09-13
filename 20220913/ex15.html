@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <!-- 브라우저 객체 모델(BOM) -->
+    <!-- 교제 p442, 표10-1 -->
+    <script>
+      let output = "";
+      for (key in window) {
+        output += `* ${key}: ${window[key]} \n`;
+      }
+      alert(output);
+    </script>
+  </body>
+</html>

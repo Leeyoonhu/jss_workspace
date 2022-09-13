@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <!-- 유효성 검사 // 아이디 영문 소문자로만일때 -->
+    <script>
+      function checkLogin() {
+        let form = document.loginFrm;
+        for (i = 0; form.userId.value.length; i++) {
+          let ch = form.userId.value.charAt(i);
+          // ch는 name="userId"인 값을 문자단위로 쪼개서 저장
+          if (
+            (ch < "a" || ch > "z") &&
+            (ch > "A" || ch < "Z") &&
+            (ch > "0" || ch < "9")
+          ) {
+            // 소문자가 아닐때   이면서    대문자이고      0보다 크고 9보다 작을때
+            alert("아이디는 영문 소문자만 가능");
+            form.userId.select();
+            return;
+          }
+        }
+      }
+    </script>
+    <form action="" name="loginFrm">
+      아이디: <input type="text" name="userId" />
+      <input type="submit" value="제출" onclick="checkLogin()" />
+    </form>
+  </body>
+</html>

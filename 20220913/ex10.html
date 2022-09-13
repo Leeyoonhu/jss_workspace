@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <!-- 유효성 검사 예제(핸들러 함수를 만드는 과정), JSP에서도 사용가능-->
+    <script>
+      function checkForm() {
+        alert(`이름은 ${document.frm.name.value}입니다.`);
+        // 폼이름 frm, name이 name인 태그의 value 출력
+      }
+    </script>
+    <form action="" name="frm">
+      <p>이름 :<input type="text" name="name" /></p>
+      <input type="submit" onclick="checkForm()" value="전송" />
+    </form>
+  </body>
+</html>

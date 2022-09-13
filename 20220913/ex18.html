@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- window 객체의 method() -->
+    <script>
+      let child = window.open("", "", "width=300, height=200");
+      child.moveTo(0, 0);
+      // 0,0으로 이동
+      setInterval(function () {
+        child.moveBy(10, 10);
+      }, 1000);
+      // 1초마다 10, 10씩 이동
+    </script>
+  </body>
+</html>
