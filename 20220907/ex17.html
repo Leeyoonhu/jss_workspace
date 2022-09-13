@@ -17,11 +17,11 @@
         document.body.innerHTML = output;
         // body의 모든 내용을 <div></div>태그로 채움(0부터 255까지)
         let divs = document.querySelectorAll("div");
-        document.getElementById("");
+        // document.getElementById("");
 
         // div 선택자 모두를 담은 divs 배열
         for (let i = 0; i < divs.length; i++) {
-          let div = divs[i];
+          let div = divs[i]; // div태그
           // divs의 길이만큼 각 배열 인덱스의 rgb값을 변경
           div.style.height = "2px";
           div.style.background = "rgb(" + i + "," + i + "," + i + ")";

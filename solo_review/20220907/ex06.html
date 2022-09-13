@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function addImg() {
+        var img = document.createElement("img"); // img태그
+        img.src = "./image/conan.jpg"; // src값
+        img.width = 100; // 가로
+        img.height = 122; // 세로
+        document.body.appendChild(img);
+      }
+    </script>
+    <a href="#" onclick="addImg()">내이름은 코난 탐정이죠</a>
+  </body>
+</html>
