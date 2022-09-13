@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 변수로 선언된 함수 집합체에서 아무거나 innerHTML 해주기 -->
+    1 + 2 =
+    <p id="add"></p>
+    3 - 1 =
+    <p id="sub"></p>
+    4.231 =
+    <p id="floor"></p>
+    <script>
+      let test = {
+        add: function (num1, num2) {
+          let result = num1 + num2;
+          return result;
+        },
+        sub: function (num1, num2) {
+          let result = num1 - num2;
+          return result;
+        },
+        floor: function (num1) {
+          return Math.floor(num1);
+        },
+      };
+      document.getElementById("add").innerHTML = test.add(1, 2);
+      document.getElementById("sub").innerHTML = test.sub(3, 1);
+      document.getElementById("floor").innerHTML = test.floor(4.231);
+    </script>
+    <p></p>
+  </body>
+</html>

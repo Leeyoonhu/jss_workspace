@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 상수 배열값 꺼내기 -->
+    <!-- for a in b => a는 b의 index 역할 -->
+    <script>
+      const nameArray = ["안녕", "나는", "유누임", "반갑다"];
+      for (name in nameArray) {
+        // name이 index 역할
+        document.write(`${name}번째 이름 : ${nameArray[name]}<br>`);
+      }
+    </script>
+  </body>
+</html>
