@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // getJSON(url, 할일)
+        $.getJSON(
+          "https://apis.data.go.kr/1262000/TravelAlarmService2/getTravelAlarmList2?serviceKey=4jFXJ6t7FNyEQ5xKvZ6OQR19jVuK5Z0%2BC1SWjoJhRVLKIo4ZkyFT5Eox%2BCqB%2BvsKPCwk%2F94qUum0poAaUAH0kQ%3D%3D&returnType=JSON&numOfRows=20&pageNo=1",
+          function (info) {
+            // url에서 가져온 데이터(info)를 각각k-v(value는 가져온값, key는 변수로)
+            $.each(info.data, function (key, value) {
+              let continent_name = value.continent_nm;
+              let country_Name = value.country_nm;
+              let flag_url = value.flag_download_url;
+              let map_url = value.map_download_url;
+              let output = "";
+              output += "<div>";
+              output += "<h2>" + continent_name + "</h2>";
+              output += "<h3>" + country_Name + "</h3>";
+              output +=
+                '<img src="' +
+                flag_url +
+                '" alt="해당 국가 이미지 없음" width="200"/>';
+              output += "&nbsp; &nbsp;";
+              output +=
+                '<img src="' +
+                map_url +
+                '" alt="해당 국가 이미지 없음" width="200" border="1"/>';
+              output += "</div>";
+              $("body").append(output);
+            });
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- jQuery - ajax 함수를 이용한 XML 전송방식 -->
+    <!-- 기존 전송박식은 request 변수에 XMLHttpRequest객체를 담아, 상태가 변경될때 잘 받았는지 확인후에 했으나
+    Ajax함수를 사용하면 빠르게 작성가능 -->
+    <!-- $.ajax(파일, {조건부합시 할 일}) -->
+    <!-- $.ajax({url:"url", 조건부합시 할 일}) -->
+    <script>
+      $(document).ready(function () {
+        $.ajax("data.html", {
+          success: function (data) {
+            // success가 되면, url에서 가져온 data를 body에 붙이셈
+            $("body").append(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

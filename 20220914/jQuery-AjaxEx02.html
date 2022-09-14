@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <!-- 공공 데이터 포털 정보 가져오기 -->
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "https://apis.data.go.kr/1262000/TravelBanService/getTravelBanList?serviceKey=4jFXJ6t7FNyEQ5xKvZ6OQR19jVuK5Z0%2BC1SWjoJhRVLKIo4ZkyFT5Eox%2BCqB%2BvsKPCwk%2F94qUum0poAaUAH0kQ%3D%3D&numOfRows=10&pageNo=1",
+          success: function (data) {
+            $(data)
+              // 가져온 data에서
+              .find("item")
+              //   item이란 놈을 찾고
+              .each(function () {
+                // item의 각각 속성 에서
+                let banNote = $(this).find("banNote").text();
+                // banNote인애의 text를 담은 변수 banNote
+                let countryName = $(this).find("countryName").text();
+                // countryName인애의 text를 담은 변수 countryName
+                let imgUrl = $(this).find("imgUrl").text();
+                // imgUrl인애의 text를 담은 변수 imgUrl
+                $("<p>")
+                  .text(banNote + " : " + countryName)
+                  .appendTo("body");
+                //   p태그에 banNote와 countryName을 붙여서 body에 추가
+                $("body").append(
+                  '<img src="' +
+                    imgUrl +
+                    '" alt="해당 국가 이미지 없음" width="100"/></p>'
+                );
+              });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
